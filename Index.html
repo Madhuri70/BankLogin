@@ -1,0 +1,32 @@
+@model Web_BankLogin.Models.User;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+</div>
+<h1> MY BANK</h1>
+<h4>Login</h4>
+<hr />
+<div class ="row"></div>
+<from asp-action="Index"></from>
+<div asp-validation-summary="ModelOnly" class="text-danegr"></div>
+<div class="from-group"></div>
+<label asp-for="Username" class="control-label"></label>
+<input asp-for="Username" class="from-control"/>
+<span asp-validation-for="Username" class="text-danger"></span>
+<div class="from-group">
+    <label asp-for="Password" class="control-label"></label>
+    <input asp-for="Password" class="from-control" type="password"/>
+    <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="from-group">
+        <input type="sumbit" value="Login" class="btn btn-primary"/>
+    </div>
+    
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
